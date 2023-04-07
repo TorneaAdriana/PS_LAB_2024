@@ -8,13 +8,11 @@ import {MatListModule} from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { FirstComponent } from './app/first/first.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstPageComponent,
-    FirstComponent
+    FirstPageComponent
   ],
   imports: [
     BrowserModule,
