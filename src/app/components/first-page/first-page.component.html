@@ -1,0 +1,14 @@
+<div class="center-container">
+  <div class="display-block">
+    <div [style]="'display:flex'">
+      <mat-list>
+        <div mat-subheader>List of cars</div>
+        <mat-list-item *ngFor="let masina of masinaList">
+          <div mat-line>{{masina.id}}</div>
+          <div mat-line>{{masina.marca}}</div>
+        </mat-list-item>
+      </mat-list>
+
+    </div>
+  </div>
+</div>
