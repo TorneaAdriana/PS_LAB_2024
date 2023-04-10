@@ -8,11 +8,21 @@ import {MatListModule} from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FirstComponent } from './first/first.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatInputModule} from "@angular/material/input";
+import {MatTableModule} from "@angular/material/table";
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstPageComponent
+    FirstPageComponent,
+    FirstComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +31,14 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ReactiveFormsModule,
+    MatListModule,
+    MatButtonModule,
+    MatInputModule,
+    MatCardModule,
+    MatTableModule,
+
 
   ],
   providers: [],

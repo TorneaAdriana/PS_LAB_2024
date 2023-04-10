@@ -15,7 +15,6 @@ export class MasinaService {
 
   getAllCars() {
     return this.httpClient.get<Masina[]>(this.baseURL);
-
   }
 
   getMasinaById(id: number) {
@@ -25,5 +24,9 @@ export class MasinaService {
 
   getMasinaByMarca(marca: string) {
     return this.httpClient.get(this.baseURL + "/find/" + marca);
+  }
+
+  deleteMasina(id: number) {
+    return this.httpClient.delete(this.baseURL + id);
   }
 }

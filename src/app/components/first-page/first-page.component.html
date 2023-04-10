@@ -1,14 +1,52 @@
 <div class="center-container">
   <div class="display-block">
+    <p *ngIf="masinaList && masinaList.length>20">O lista cam mare de masini</p>
+    <p *ngIf="masinaList && masinaList.length<20">O lista cam mica de masini</p>
     <div [style]="'display:flex'">
       <mat-list>
         <div mat-subheader>List of cars</div>
-        <mat-list-item *ngFor="let masina of masinaList">
-          <div mat-line>{{masina.id}}</div>
-          <div mat-line>{{masina.marca}}</div>
+        <mat-list-item *ngFor="let car of masinaList">
+          <div mat-line>{{car.id}}</div>
+          <div mat-line>{{car.pret}}</div>
         </mat-list-item>
       </mat-list>
 
+      <mat-list>
+        <div mat-subheader>List of owners</div>
+        <mat-list-item *ngFor="let owner of ownerList">
+          <div mat-line>{{owner.id}}</div>
+          <div mat-line>{{owner.name}}</div>
+        </mat-list-item>
+      </mat-list>
+
+      <mat-list>
+        <div mat-subheader>List of owners with their cars</div>
+        <mat-list-item *ngFor="let owner of ownerList">
+          <div mat-line>{{owner.name}}</div>
+          <div mat-line *ngIf="owner.id>30">{{owner.id}}</div>
+          <mat-divider></mat-divider>
+          <mat-list>
+            <mat-list-item *ngFor="let ownerCar of owner.cars">
+              <div mat-line>{{ownerCar.id}}</div>
+              <div mat-line>{{ownerCar.maker}}</div>
+            </mat-list-item>
+          </mat-list>
+        </mat-list-item>
+      </mat-list>
     </div>
   </div>
+<!--  <div id="form">-->
+<!--    <form [formGroup]="updateForm" (submit)="addCarToOwner()">-->
+<!--      <mat-form-field class="form-field" appearance="outline">-->
+<!--        <mat-label>Owner ID</mat-label>-->
+<!--        <input matInput formControlName="ownerInput" required>-->
+<!--      </mat-form-field>-->
+<!--      <mat-form-field class="form-field" appearance="outline">-->
+<!--        <mat-label>Car ID</mat-label>-->
+<!--        <input matInput formControlName="carInput" required>-->
+<!--      </mat-form-field>-->
+<!--      <br/>-->
+<!--      <button mat-button type="submit">Perform update</button>-->
+<!--    </form>-->
+<!--  </div>-->
 </div>
