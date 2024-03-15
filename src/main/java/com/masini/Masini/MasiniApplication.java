@@ -39,8 +39,8 @@ public class MasiniApplication {
 			masina.setProprietar(prop);
 			masinaRepository.save(masina);
 
-			masinaRepository.findById(3L).ifPresent(masina2 -> System.out.println(masina2.getProprietar().getNume()));
-			propietarRepository.findById(5L).ifPresent( propietar -> {
+			masinaRepository.findById(1L).ifPresent(masina2 -> System.out.println(masina2.getProprietar().getNume()));
+			propietarRepository.findById(1L).ifPresent( propietar -> {
 				System.out.println(propietar.getMasini().get(0).getMarca());
 			});
 
