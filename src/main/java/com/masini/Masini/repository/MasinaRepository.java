@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface MasinaRepository extends CrudRepository<Masina, Long> {
 
     Masina findFirstByMarca(String marca);
+
+    Masina findFirstByIdAndMarca(Long id, String marca);
 }

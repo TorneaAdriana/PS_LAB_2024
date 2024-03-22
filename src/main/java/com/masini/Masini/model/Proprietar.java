@@ -24,7 +24,7 @@ public class Proprietar {
 
     private String nume;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.MERGE,CascadeType.PERSIST})
     private List<Masina> masini;
 
 }
